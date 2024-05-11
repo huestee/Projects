@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Copyright	*/
+footer .Conte{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	padding-bottom:30px;
+}
+
+footer .Conte .Copy{
+	font-size:20px;
+}
+
+footer .Conte #Social{
+	width:100%;
+	text-align:center;
+}
+
+footer .Conte #Social a{
+	text-decoration:none;
+}
+
+footer .Conte #Social a img{
+	width:100%;
+	max-width:35px;
+	height:100%;
+	max-height:35px;
+}

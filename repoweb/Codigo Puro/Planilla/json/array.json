@@ -1,0 +1,15 @@
+[
+	{"name": "Carlos", "category": 3, "salary": 10000},
+
+	{"name": "Pedro", "category": 1, "salary": 4000},
+
+	{"name": "Juan", "category": 2, "salary": 7000},
+
+	{"name": "Maria", "category": 1, "salary": 7000},
+
+	{"name": "Camila", "category": 1, "salary": 5005.64},
+
+	{"name": "Fernanda", "category": 1, "salary": 9010.60},
+
+	{"name": "Socorro", "category": 1, "salary": 5500.70}
+]

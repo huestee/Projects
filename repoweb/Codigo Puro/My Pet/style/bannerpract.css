@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Banner{
+	position:relative;
+	margin-top:0px;
+	margin-left:0px;
+	height:270px;
+}
+
+/*.Banner img{
+	width:100%;
+	height:auto;
+}
+*/
+.Banner .Conte{
+	position:absolute;
+	top:50%;
+	left:50%;
+	/*Se utiliza para que todo el contenido de la etiquta "Conte" quede al centro. 		*/
+	transform:translateX(-50%) translateY(-50%);
+	color:#fff;
+	text-align:center;
+	
+	width:100%;
+	height:100%;
+	/*max-height:auto;*/
+	background-image:url(Imagenes/torre.jpg);
+	background-repeat:no-repeat;
+	background-blend-mode:soft-light;
+	background-position:center;
+	background-size:cover;
+}
+
+.Banner .Conte h2{
+	transform:translateY(70px);
+	font-size:28px;
+}
+
+.Banner .Conte p{
+	transform:translateY(80px);
+}
+
+.Banner .Conte a{
+	display:block;
+	transform:translateX(-115px) translateY(100px);
+	text-transform:capitalize;
+	text-decoration:none;
+	width:90px;
+	padding:0.5rem; /* 7px	*/
+	color:#fff;
+	border:3px solid #ffffff;
+	background-color:rgba(0,0,0,0.6);
+	transition:background-color .7s;
+}
+
+.Banner .Conte a:hover{
+	background-color:rgba(255,255,255,0.6);
+	color:#000;
+	font-weight:bold;
+	border:3px solid #000;
+}

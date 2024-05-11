@@ -1,0 +1,273 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=New+Tegomin&display=swap');
+/* CSS Document */
+:root{
+	--red: #E50914;
+	--fondo: #141414;
+	--skyblue: #00d9ff;
+}
+*{
+	margin: 0;
+	padding: 0;
+	/* box-sizing: border-box; */
+	scroll-behavior: smooth;
+	flex-wrap: wrap;
+}
+body{
+	background: var(--fondo);
+	font-family: 'Indie Flower', sans-serif;
+	font-size: 16px;
+	font-style:normal;
+	text-align: justify;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+	border: 2px solid #fff;
+}
+.header{
+	padding: 1.875em 0;
+	/* border: 2px solid #fff; */
+}
+.header_container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header_logotipo{
+	font-family: 'New Tegomin', sans-serif;
+	font-size: 3.5rem;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: var(--red);
+	border-radius: 25px;
+	border: 3px dotted #cc4444;
+}
+/*------------- Main Menu -------------*/
+.menu{
+	/* border: 3px dotted #cc4444; */
+	font-size: 2rem;
+}
+.menu_list{
+	/* border: 3px dotted #fff; */
+	display: flex;
+	list-style: none;
+}
+.menu_item{
+	/* border: 3px dotted #ccc; */
+	text-transform: capitalize;
+	padding: 0.5em; /*12px*/
+}
+.menu_item a{
+	text-decoration: none;
+	color: #aaa;
+}
+.menu_item a:hover, .menu_item a.active{
+	border-bottom: 1px dotted #aaa;
+	color: #fff;
+}
+/* Principal */
+main{
+	font-size: 1rem;
+}
+/* ---------- Pelicula Principal ---------- */
+.mainmovie{
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/backdrop.jpg);
+	background-position: center top;
+	background-size: cover;
+	min-height: 40.625em;
+	color: #fff;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items:flex-end;
+}
+.mainmovie_container{
+	margin-bottom: 6.25em;
+	shape-margin: 15px;
+}
+.mainmovie_title{
+	font-weight: 600;
+	font-size: 2.1875em; /*35px*/
+	margin-bottom: 0.5em; /*17.5*/
+}
+.mainmovie_description{
+	font-size: 1.25rem; /*20px*/
+	line-height: 1.3em; /*26px*/
+	max-width: 50%;
+	margin-bottom: 1.25em; /*25px*/
+}
+/* Boton Generales */
+.button{
+	background: rgba(0, 0, 0, .5);
+	border: none;
+	border-radius: 0.31em;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	cursor:pointer;
+	min-width: 10em; /*180*/
+	height: 3.125em; /*50*/
+	transition: .5s ease all;
+}
+.button:hover{
+	background-color: #fff;
+	color: #000;
+}
+.button_text{
+	font-weight: bold;
+}
+/* ------- Icon Play-------- */
+.icon-play{
+	color: #000;
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-left: 11px solid currentColor;
+	border-bottom: 7px solid transparent;
+	filter: drop-shadow(2px 2px 3px var(--red)) drop-shadow(4px 4px 6px var(--skyblue));
+}
+/* ------- Icon Info-------- */
+.icon-info{
+	width: 16px;
+	filter: drop-shadow(2px 2px 3px var(--red)) drop-shadow(4px 4px 6px var(--skyblue));
+}
+/* Peliculas Recomendadas */
+.recommended-movies{
+	border: 1px solid #E50914;
+	margin-bottom: 4.375em; /*70*/
+}
+/* Controles & Titulo*/
+.rm_title-controls{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.rm_text{
+	color: #fff;
+	font-size: 1.875em; /*30*/
+}
+/* .rm_indicators button{
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	margin-right: 2px;
+}*/
+.rm_indicators button:hover,
+.rm_indicators button:active{
+	background: var(--red);
+} 
+.rm_maincontainer{
+	/* border: 2px solid #00d9ff; */
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+/* Boton Flecha */
+.button--left-arrow, .button--right-arrow{
+	background: rgba(0, 0, 0, .3);
+	position: absolute;
+	/* top: calc(100% - 30%); */
+	height: 30%;
+	min-width: 3.5em;
+	z-index: 100;
+}
+.button--left-arrow{
+	left: 0;
+}
+.button--right-arrow{
+	right: 0;
+}
+.button--left-arrow:hover, .button--right-arrow:hover{
+	background: rgba(0, 0, 0, .6);
+	color: #fff;
+}
+/* Icon Flechas */
+.icon-left-arrow, .icon-right-arrow{
+	/* border: 2px solid #E50914; */
+	position: relative;
+	display: inline-flex;
+	padding: 1em;
+	/* margin: 2rem; 32 */
+}
+.icon-left-arrow{
+	left: 8px;
+	border-top: 5px dotted currentColor;
+	border-left: 5px solid currentColor;
+	transform: rotate(-45deg);
+}
+.icon-right-arrow{
+	right: 8px;
+	border-top: 5px solid currentColor;
+	border-right: 5px dotted currentColor;
+	transform: rotate(45deg);
+}
+/* ---- ---- Carousel ---- ---- */
+.rm_carousel{
+	/* border: 1px solid #00ff2a; */
+	width:100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+.carousel{
+	display: flex;
+	flex-wrap: nowrap;
+}
+.carousel_movie{
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+.carousel_movie.hover{
+	transform: scale(1.2);
+	transform-origin: center;
+}
+.carousel_movie img{
+	width: 100%;
+	vertical-align: top;
+	margin: 0;
+}
+
+/* ------------- Media Query ------------- */
+@media all and (max-width: 1200px){
+	body{
+		font-size: 10px;
+	}
+}
+@media all and (max-width: 900px){
+	.mainmovie_description{
+		max-width: 100%;
+	}
+}
+@media all and (max-width: 600px){
+	body{
+		font-size: 14px;
+	}
+	.rm_carousel{
+		overflow: visible;
+	}
+	.carousel{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25em;
+	}
+	.rm_indicators, .button--left-arrow, .button--right-arrow{
+		display: none;
+	}
+}
+@media all and (max-width: 300px){
+	body{
+		font-size: 12px;
+	}
+	.header_container{
+		flex-direction: column;
+		text-align: center;
+	}
+}
+/* 
+300
+600
+900
+1200
+*/

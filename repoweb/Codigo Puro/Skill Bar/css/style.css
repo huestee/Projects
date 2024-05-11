@@ -1,0 +1,88 @@
+/*
+  //////////////////////////////////
+  ////°°°°°°°°°°°°°°°°°°°°°°°////////
+  ///-------Creted by Hueste-------///
+  ///////°°°°°°°°°°°°°°°°°°////////////
+  //////////////////////////////////////
+ */
+@charset 'UTF-8';
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif 'Segoe UI', Tahoma;
+  box-sizing: border-box;
+}
+body{
+  background: #153365;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.container{
+  background: radial-gradient(rgba(241, 196, 15, .9), #7425ff);
+  padding: 1.8rem;
+  width: 450px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+  border-radius: 20px;
+}
+h1{
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 10px #ff9900, 0 0 10px #ff9900, 0 0 10px #ff9900, 0 0 10px #ff9900;
+}
+.skillbox{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1.25rem 0;
+  border-radius: 10px;
+  border-left: 1px solid rgba(0, 0, 0, .3);
+  border-right: 1px solid rgba(0, 0, 0, .3);
+}
+.skillbox__text{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 10px 10px;
+}
+.skillbox__text h3:nth-child(2){
+  color: #ffffff;
+  text-shadow: 0 -3px 3px #076d70, -5px 0 10px #000, 0 3px 3px #ff9900;
+}
+.skill{
+  background: #076d70;
+  box-sizing: border-box;
+  border: 1px solid #52befd;
+  border-radius: 50px;
+  padding: 4px;
+  overflow: hidden;
+  cursor: not-allowed;
+}
+.skill__level{
+  background: #52befd;
+  border-radius: 50px;
+  width: 100%;
+  height: 10px;
+  transform: translateX(-100%);
+  transition: all .5s;
+}
+.skill:hover .skill__level{
+  transform: translateX(0);
+}
+.skillbox:nth-child(2) .skill__level, .skillbox:nth-child(3) .skill__level{
+  width: 90%;
+}
+.skillbox:nth-child(4) .skill__level, .skillbox:nth-child(7) .skill__level {
+  width: 60%;
+}
+.skillbox:nth-child(5) .skill__level{
+  width: 50%;
+}
+.skillbox:nth-child(6) .skill__level{
+  width: 80%;
+}

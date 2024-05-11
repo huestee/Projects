@@ -1,0 +1,98 @@
+@charset 'UTF-8';
+
+body{
+    background-color: #f5eef8;
+    font-size: 16px;
+}
+.conte{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.conte-cards{
+    margin: 4.375em 0;
+}
+.card{
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    border-radius: 0.93em;
+    padding: 1.25em;
+    align-items: center;
+    margin-bottom: 3.125em;
+}
+.card-thumbnail{
+    /* border: 1px solid #f1c40f; */
+    overflow: hidden;
+    display: inline-block;
+    width: 40.62em;
+    height: 12.5em;
+    margin-right: 1.25em;
+    border-radius: 10px;
+}
+.card-img{
+    width: 100%;
+}
+.card-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.875em;
+    font-weight: normal;
+    margin-bottom: 1.25em;
+}
+.card-link{
+    color: #000000;
+    text-decoration: none;
+}
+.card-abstract{
+    line-height: 1.75em;
+    color: #6d6d6d;
+    margin-bottom: 1.25em;
+}
+.button{
+    background-color: #403cc2;
+    border: none;
+    border-radius: 6.25em;
+    min-width: 7.5em;
+    height: 3.125em;
+    padding: 0 1.875em;
+    text-decoration: none;   
+    color: #000;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3 ease all;
+}
+.button-text{
+    font-weight: 600;
+}
+.button:hover{
+    background-color: #181881;
+    color: #ffffff;
+}
+/* Modificador */
+.button-absolute{
+    position: absolute;
+    right: 1.25em;
+    bottom: -1.56em;
+}
+.button-focus:focus{
+    border: 2px solid #f1c40f;
+}
+/*Modificador color buttom*/
+.button-green{
+    background-color: #7ba771;
+}
+.button-green:hover{
+    background-color: #437837;
+}
+.phrase{
+    text-align: center;
+    margin: 4.375em 0;
+}
+.phrase-text{
+    margin-bottom: 1.25rem;
+    font-size: 1.875em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: italic;
+}

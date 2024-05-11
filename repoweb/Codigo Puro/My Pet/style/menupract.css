@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+
+header{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:150px;
+	border:0px solid #000;
+	z-index:100;
+}
+/*
+header .Cabecera{
+	position:relative;
+	background:#fff;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	max-height:100px;
+}
+*/      
+header #Cabecera{
+	width:100%;
+	height:50px;
+	transform:translateX(0%) translateY(45%);
+		text-align:center;
+			display:flex;
+			justify-content:center;
+	background:#fff;
+	border:.1px solid #333;
+}
+
+header #Cabecera a{
+	width:130px;
+		line-height:45px;
+		display:flex;
+		justify-content:center;
+		
+	text-decoration:none;
+	transition:background-color .7s;/**/
+	
+	border-radius:15px;
+	background:#333;
+	border:0px solid #333;
+}
+
+header #Cabecera a:hover{
+	background-color:rgba(0,0,0,0.1);
+	border:1px solid rgba(0,0,0,0.1);
+}
+
+header #Cabecera a #Text1:hover, header #Cabecera a #Text2:hover{
+	color:#000;
+}
+
+header #Cabecera a #Text1{
+	width:85px;
+	font-weight:bold;
+	color:#00A3FF;
+	transition:color .7s ease;/**/
+}
+
+header #Cabecera a #Text2{
+	width:50px;
+	font-weight:normal;
+	color:#FF003F;
+	transition:color .7s ease;/**/
+}
+
+header .Conte{
+	display:inherit;
+	background:#333;
+	margin-top:50px;
+	width:100%;
+	height:100%;
+	max-height:50px;
+	transition:background-color .7s;/**/
+}
+
+header .Conte img{
+	width:30px;
+	margin:5px;
+}
+
+header .Conte label img{
+	margin:0px;
+	border-radius:11px;
+}
+
+header .Conte h1{
+	text-transform:uppercase;
+	float:left;
+	color:#fff;
+	transition:color 3s ease;
+}
+
+#Menubar{
+	display:none;
+}
+
+header .Conte label{
+	float:right;
+	margin:6px;
+	cursor:pointer;
+}
+
+header .Conte .Menu{
+	display:block;
+	overflow:hidden;
+	width:100%;
+	height:35vh;
+		margin-top:1em;
+	border-radius:15px;
+	background-color:rgba(0,0,0,0.5);
+		transition:background-color .7s;/**/
+		transform:translateX(-101%);
+		text-align:center;
+}
+
+header .Conte #Menubar:checked ~ .Menu{
+	transform:translateX(0%);
+	/*margin-left:-6%*/
+}
+
+header .Conte .Menu ol{
+	list-style:none;
+	margin:10px;
+}
+ 
+header .Conte .Menu ol li a{
+	display:block;
+		text-decoration:none;
+		transition:background-color .7s;/**/
+	color:#fff;
+	height:50px;
+	margin-top:18px;
+	padding:1em;	/*	15px	*/
+		/*border-bottom:1px solid rgba(255,255,255,0.7);
+		border-top:1px solid rgba(255,255,255,0.7);*/
+}
+
+header .Conte .Menu ol li a:hover{
+	background-color:rgba(255,255,255,0.5);
+	color:#000;
+	font-weight:bold;
+	border:3px solid rgba(0,0,0);
+}
+
+/*	Clase que agregaremos cuando el usuario haga scroll	*/
+.MenuFixed{
+	position:fixed;
+	width:100%;
+	top:-50px;
+	box-shadow:0px 4px 3px rgba(0,0,0,0.3); /*	Para poner sombras	*/
+	z-index:100;
+}
+
+.Borde1{	
+	border-bottom:1px solid rgba(255,255,255,0.7);
+	border-top:1px solid rgba(255,255,255,0.7);
+}
+
+.Borde2{
+	border-bottom:1px solid rgba(0,0,0,0.7);
+	border-top:1px solid rgba(0,0,0,0.7);
+}
+
+/*
+.MenuFixed2{
+	position:absolute;
+	top:-100px;
+	left:0px;
+	width:30%;
+	height:30vh;
+	margin-top:-100px;
+	border-radius:15px;
+	background-color:rgba(51,51,51,0.5);
+	transition:all 0s;
+	transform:translateX(-100%);
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

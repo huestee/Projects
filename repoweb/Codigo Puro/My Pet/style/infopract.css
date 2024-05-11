@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Info{
+	background:#333;
+	color:#fff;
+	text-align:center;
+}
+
+#Info .Conte{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+
+#Info .Conte .Pet{
+	margin:0.5rem;
+}
+
+#Info .Conte .Pet img{
+	width:100%;
+	max-width:180px;
+	height:100%;
+	max-height:180px;
+	border-radius:50%;
+	border:1px solid #fff;
+	/*Para ajustar los filtros de la imagen	*/
+	filter:brightness(110%) contrast(110%);
+}

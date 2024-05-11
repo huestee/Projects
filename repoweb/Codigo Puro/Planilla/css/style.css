@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0;
+	padding:0;
+	background-color:#6a636b;
+	box-sizing:border-box;
+}
+
+.conte{
+	width:85%;
+	text-align:center;
+	flex-wrap:wrap;
+}
+
+header, main, footer{
+	background-color:#ED484B;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	margin-bottom:50px;
+}
+
+header .conte{
+	background-color:#0044FF;
+}
+
+main .conte{
+	background-color:#333;
+	display:block;
+	padding:150px 0;
+}
+
+main .conte #btn{
+	background-color:#fff;
+	border:2px solid #553F94;
+	padding:3px;
+	cursor:pointer;
+}
+
+main .conte table{
+	width:80%;
+	margin:auto;
+}
+
+main .conte table th, main .conte table td{
+	padding:8px;
+}
+
+main .conte table, main .conte table th, main .conte table td{
+	border:1px solid #000;
+}
+
+main .conte table{
+	border-spacing:4px;
+}
+
+footer{
+	margin-bottom:0;
+}
+
+footer .conte{
+	background-color:#fff;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+}
+
+.imagenes a img{
+	width:30px;
+	margin-left:10px;
+}
+
+.imagenes a img:hover{
+	filter:grayscale(100%);
+}
