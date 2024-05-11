@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+    margin: 0;
+    font-family: Time New Roman, "Sans-Serif";
+    background: #2a363b;
+}
+
+.title{
+    text-align: center;
+    color: #ccc;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    flex-direction: column;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button{
+    background: none;
+    border: 2px solid #ffd8d5;
+    outline: none;
+
+    position: relative;
+    width: 175px;
+
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ff847c;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    margin: 1rem 0 1rem 0;
+    padding: .5rem 1rem;
+}
+
+/*--------------------------Estilo - Rellenar Boton--------------------------*/
+.fill{
+    transition: color .5s;
+}
+
+.fill:hover{
+    color: #2a363b;
+}
+
+.fill::before{
+    content: "";
+
+    background-color: #ff847c;
+    position: absolute;
+    display: block;/*Para darle medidas*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    transform: translateX(-100%);
+    transition: transform .5s;
+
+    z-index:-1;
+}
+
+.fill:hover::before{
+    transform: translateX(0);
+}
+
+/*-------------------------Estilo - Cruz que Aparezca desde el Centro-------------------------*/
+.cross{
+    transition: color .5s;
+}
+
+.cross:hover{
+    color: #2a363b;
+}
+
+.cross::before, .cross::after{
+    content: "";
+
+    background-color: #ff847f;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    transition: transform .6s linear;
+}
+
+.cross::before{
+    transform: rotateY(90deg);
+}
+
+.cross::after{
+    transform: rotateX(90deg);
+}
+
+.cross:hover::before, .cross:hover::after{
+    transform: rotate(0deg);
+}
+
+/*--------------------Estilos - Efecto de Crecimiento--------------------*/
+.grow{
+    letter-spacing: -1px;
+    transition: box-shadow .5s, letter-spacing .5s;
+}
+
+.grow:hover{
+    letter-spacing: 5px;
+    box-shadow: 0 0 0 5px #ff847f;
+}
+
+/*--------------------------Estilos - EFecto Texto--------------------------*/
+.scale-text{
+    transition: color .5s;
+}
+
+.scale-text:hover{
+    color: #2a363b;
+}
+
+.scale-text::before{
+    content: attr(data-content);
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: scale(5);
+
+    color: #ff847c;
+    background-color: #2a363b;
+    opacity: 0;
+
+    transition: transform .5s, opacity .5s;
+}
+
+.scale-text:hover::before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*-------------------------Estilo - Efecto de Brillo-------------------------*/
+.shiny{
+    transition: color .5s;
+}
+
+.shiny:hover{
+    color: #2a362a;
+}
+
+.shiny::before, .shiny::after{
+    content: "";
+
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background-color: transparent;
+    transition: background-color .4s;
+
+    z-index: -1;
+}
+
+.shiny:hover::before{
+    background-color: #7c90ff;
+}
+
+.shiny::after{
+    content: "";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top:50%;
+    height: 30%;
+
+    background-color: #fff;
+    transform: rotate(45deg) translateY(770%);
+}
+
+.shiny:hover::after{
+    transition:transform .6s;
+    transform: rotate(45deg) translateY(-840%);
+}
+

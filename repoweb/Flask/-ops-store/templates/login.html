@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block h1 %}
+  {% block title %}
+    LOG IN
+  {% endblock %}
+{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="static/general.css">
+{% endblock %}
+
+{% block main %}
+<form action="/login" method="post" class="needs-validation col-md-8 col-lg-4 mx-auto" novalidate>
+  <!-- Username -->
+  <div class="row mx-auto mb-3">    
+    <input class="form-control col-12" id="validationCustom03 me-5" name="username" placeholder="Username" title="Username" type="text" autocomplete="off" required>
+  
+    <div class="invalid-feedback col-12 border-top border-danger">Please provide username.</div>
+  </div>
+  <!-- Password -->
+  <div class="main-p row mx-auto mb-3">
+  
+    <input class="form-control col-12" id="validationCustom03 me-5" name="password" placeholder="Password" title="Password" type="password" autocomplete="off" required>
+  
+    <div class="invalid-feedback col-12 border-top border-danger">Please provide password.</div>
+  </div>
+  
+  <div class="mx-3">
+    <button class="btn btn-primary btn-block w-100" type="submit">Login</button>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block h1 %}
+  OPS
+  {% block title %}
+    Store
+  {% endblock %}
+  APP
+  {% endblock %}
+  
+  {% block main %}
+  <div class="container">
+    {% if products %}
+    <div class="cards">
+      {% for row in products %}
+      {% if row["quantity"] %}
+      <div class="card_main card_main_img-1">
+        <section class="card_text">
+          <a href="#" class="card_link">
+            <h3 class="card_h">{{ row["name"] }}</h3>
+            {% for img in imgs %}
+              {% if img.id == row["upload_id"] %}
+              <span class="img">
+                <span class="img-fondo">
+                </span>
+                <span class="own-img">
+                  <img src="{{ img.name }}" alt="Image Here" width="150px" height="150px">
+                </span>
+                  
+              </span>
+              {% endif %}
+            {% endfor %}
+            <p class="card_p">{{ row["description"] }}</p>
+
+            <span class="detail">
+              <span class="detail_extra">
+                <p>UNIDAD MEDIDA</p><p class="detail_extra_color">{{ row["um"] }}</p>
+              </span>
+              <span class="detail_extra">
+                <p>STOCK</p><p class="detail_extra_color">{{ row["quantity"] }}</p>
+              </span>
+              <p class="detail_price">$ {{ row["price"] }}</p>
+            </span>
+          </a>
+        </section>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="container d-flex flex-wrap justify-content-center align-items-center m-auto">
+    <div class="bg-ingo border rounded-pill w-auto m-auto">
+      <h2 class="mb-3">Do not data yet</h2>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<!--
+<div class="container">
+  <div class="mx-auto">
+    {% if products %}
+    <div class="card mask-custom">
+      <div class="card-body">
+        <div class="table-responsive">
+          <form action="/action" method="get">
+          <table class="table table-borderless table-stripedd-flex m-auto mx-5">
+            <thead class="table-product">
+              <tr>
+                <th scope="col">Items</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">U/M</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th class="text-center" scope="col">Image</th>
+              </tr>
+            </thead>
+            
+            <tbody class="">
+              {% set cont = namespace(a=1) %}
+              {% for row in products %}
+                {% if row["quantity"] %}
+                <tr>
+                  <td scope="row">{{ cont.a }} {% set cont.a = cont.a + 1 %}</td>
+                  <td scope="row">
+                    <input type="text" name="{{ row.name }}" class="d-none">
+                    <button class="btn bg-transparent"name="{{ row.name }}" >{{ row["name"] }}</button>
+                  </td>
+                  <td scope="row">{{ row["um"] }}</td>
+                  <td scope="row">{{ row["description"] }}</td>
+                  <td scope="row">{{ row["price"] }}</td>
+                  <td>{{ row["quantity"] }}</td>
+                  {% for img in imgs %}
+                    {% if img.id == row["upload_id"] %}
+                    <td><img class="image" src="{{ img.name }}" alt="Image Here" width="150px" height="150px"></td>
+                    {% endif %}
+                  {% endfor %}
+                </tr>
+                {% endif %}
+              {% endfor %}
+            </tbody>
+          </table>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="container d-flex flex-wrap justify-content-center align-items-center m-auto">
+      <div class="bg-info border rounded-pill w-auto m-auto">
+        <h2 class="mb-3">Do not data yet</h2>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div> -->
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block h1 %}
+  {% block title %}
+    Add Product
+  {% endblock %}
+{% endblock %}
+
+{% block main %}
+<!-- col-md-6 col-lg-4 offset-md-3 offset-lg-4 -->
+  <form action="/addproduct" method="post" class="needs-validation col-md-8 col-lg-4 mx-auto" enctype="multipart/form-data" novalidate>
+    <!-- Product Name -->
+    <div class="row border mx-auto mb-3">
+      <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Name</span></label>
+
+      <input class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="name" placeholder="Product Name" type="text" title="Product Name" autocomplete="off" required>
+
+      <span class="col-12"></span>
+      <span class="col-sm-4 col-lg-12"></span>
+      <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide product name.</div>
+    </div>
+    <!-- Unit of Measurement -->
+    <div class="row border mx-auto mb-3">
+      <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Unit of Measurement</span></label>
+
+      <input class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="um" placeholder="Unit of Measurement" type="text" title="Unit of Measurement" autocomplete="off" required>
+
+      <span class="col-12"></span>
+      <span class="col-sm-4 col-lg-12"></span>
+      <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide product name.</div>
+    </div>
+    <!-- Description -->
+    <div class="row border mx-auto mb-3">
+      <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Description</span></label>
+
+      <textarea class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="description" placeholder="Write the product desription.
+      No excede 100 words" rows="3" required></textarea>
+
+      <span class="col-12"></span>
+      <span class="col-sm-4 col-lg-12"></span>
+      <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide product description.</div>
+    </div>
+    <!-- Price -->
+    <div class="row border mx-auto mb-3">
+      <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Unit Price</span></label>
+
+      <input class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="price" placeholder="Unit Price" type="text" autocomplete="off" required>
+
+      <span class="col-12"></span>
+      <span class="col-sm-4 col-lg-12"></span>
+      <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide unit price.</div>
+    </div>
+    <!-- Quantity -->
+    <div class="row border mx-auto mb-3">
+      <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Quantity</span></label>
+      
+      <input class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="quantity" placeholder="Quantity" type="text" autocomplete="off" required>
+      
+      <span class="col-12"></span>
+      <span class="col-sm-4 col-lg-12"></span>
+      <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide quantity of the product.</div>
+    </div>
+    <!-- Img -->
+    <div class="row border mx-auto mb-3">
+      <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Image</span></label>
+    
+      <input class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="image" type="file" required>
+    
+      <span class="col-12"></span>
+      <span class="col-sm-4 col-lg-12"></span>
+      <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide product image.</div>
+    </div>
+    <!-- Button -->
+    <div class="mx-3">
+      <button class="btn btn-primary btn-block w-100" type="submit">Save</button>
+    </div>
+  </form>
+{% endblock %}

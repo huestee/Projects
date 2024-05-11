@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}">
+{% endblock%}
+
+{% block h1 %}
+  {% block title %}
+    My Purchases
+  {% endblock %}
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="mx-auto">
+    {% if transactions %}
+    <div class="mask-custom">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-borderless table-stripedd-flex m-auto mx-5">
+            <thead class="table-product">
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+                <th class="text-center" scope="col">Image</th>
+              </tr>
+            </thead>
+            <tbody class="">
+              {% set cont = namespace(a=1) %}
+              {% for row in transactions %}
+              <tr>
+                <td scope="row">{{ cont.a }} {% set cont.a = cont.a + 1 %}</td>
+                <td scope="row">{{ row["name"] }}</td>
+                <td scope="row">$ {{ row["price"] }}</td>
+                <td scope="row">$ {{ row["amount"] }}</td>
+                {% for img in imgs %}
+                  {% if img.id == row["upload_id"] %}
+                  <td class="text-center"><img class="image" src="{{ img.name }}" alt="Image Here" width="150px" height="150px"></td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+            <tfoot>
+              <tr>
+                <td scope="row">Current Cash</td>
+                <td scope="col" colspan="6" class="table-active text-center table-foot">$ {{ cash }}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="container d-flex flex-wrap justify-content-center align-items-center m-auto">
+      <div class="bg-info border rounded-pill w-auto m-auto">
+        <h2 class="mb-3">Do not data yet</h2>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

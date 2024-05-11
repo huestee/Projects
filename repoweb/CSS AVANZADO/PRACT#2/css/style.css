@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+    transition timing function
+
+    ease significa desacelerar / frenar
+
+    ease: La transicion comienza lentamente, acelera bruscamente y luego disminuye lentamente hacia el final.
+
+    ease-in: La transicion comienza lentamente, y luego se acelera prograsivamente hasta el final.
+
+    ease-out: La animacion comienza abruptamente y luego se ralentiza progresivamente hacia el final.
+
+    ease-in-out: La animacion comienza lentamente, se acelera y luego se ralentiza hacia el final.
+
+    linear: La transicion se mueve de principio a fin a una velocidad constante.
+
+   shorthand transition 
+*/
+
+body{
+    margin: 0px;
+    background: #ccc;
+}
+
+.conte{
+    background-color: #FF6D59;
+    transition: background-color 2s;
+}
+
+.box{
+    background-color:#59C8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 60px;
+    margin: 3rem 0px;
+
+    font-size: .8em;
+    text-align: center;
+
+    transition: transform 2s 1s, background-color 2s 2s, color 2s 1s;
+}
+
+.conte:hover .box{
+    transform: translateX(calc(100vw - 100%));
+
+    background-color: #FF6D59;
+
+    color: #59C8FF;
+}
+
+.conte:hover{
+    background-color: #000;
+}
+
+.ease{
+    transition-timing-function: ease;
+}
+
+.ease-in{
+    transition-timing-function: ease-in;
+}
+
+.ease-out{
+    transition-timing-function: ease-out;
+}
+
+.ease-in-out{
+    transition-timing-function: ease-in-out;
+}
+
+.linear{
+    transition-timing-function: linear;
+}
+
+
+
+
+
+

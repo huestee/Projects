@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block h1 %}
+  {% block title %}
+    Register
+  {% endblock %}
+{% endblock %}
+
+{% block main %}
+<form action="/register" method="post" class="needs-validation col-md-8 col-lg-4 mx-auto" novalidate>
+  <!-- Username -->
+  <div class="row mx-auto mb-3">    
+    <input class="form-control col-12" id="validationCustom01 me-5" name="username" placeholder="Username" title="Username" type="text" autocomplete="off" required>
+  
+    <div class="invalid-feedback col-12 border-top border-danger">Please provide username.</div>
+  </div>
+  <!-- Rol -->
+  <div class="form-control d-flex flex-wrap justify-content-between align-items-center mb-3">    
+    <label for="validationCustom04" class="form-label">Role</label>
+
+    <select class="form-select" id="validationCustom04" name="role" required>
+      <option selected disabled value="">Choose</option>
+      <option name="role" value="admin">Admin</option>
+      <option name="role" value="user">User</option>
+    </select>
+    
+    <div class="invalid-feedback col-12 border-top border-danger">
+      Please select a valid state.
+    </div>
+  </div>
+  <!-- Password -->
+  <div class="row mx-auto mb-3">
+  
+    <input class="form-control col-12" id="validationCustom03 me-5" name="password" placeholder="Password" title="Password" type="password" autocomplete="off" required>
+  
+    <div class="invalid-feedback col-12 border-top border-danger">Please provide password.</div>
+  </div>
+  <!--Check Password -->
+  <div class="row mx-auto mb-3">
+  
+    <input class="form-control col-12" id="validationCustom04 me-5" name="confirmation" placeholder="Confirmation" title="Confirmation" type="password" autocomplete="off" required>
+  
+    <div class="invalid-feedback col-12 border-top border-danger">Please provide verification of password.</div>
+  </div>
+  
+  <div class="mx-3">
+    <button class="btn btn-primary btn-block w-100" type="submit">Save</button>
+  </div>
+</form>
+{% endblock %}

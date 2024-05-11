@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block h1 %}
+  {% block title %}
+    Buy Product
+  {% endblock %}
+{% endblock %}
+
+{% block main %}
+<form action="/buy" method="post" class="needs-validation col-md-8 col-lg-4 mx-auto" enctype="multipart/form-data" novalidate>
+  <!-- Product Name -->
+  <div class="row border mx-auto mb-3">
+    <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Product Name</span></label>
+
+    <input class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="name" placeholder="Product Name" type="text" title="Product Name" autocomplete="off" required>
+
+    <span class="col-12"></span>
+    <span class="col-sm-4 col-lg-12"></span>
+    <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide product name.</div>
+  </div>
+
+  <!-- Quantity -->
+  <div class="row border mx-auto mb-3">
+    <label for="validationCustom03" class="form-label col-sm-4 col-lg-12 mb-2 my-sm-auto mb-xl-2"><span class="label_text">Quantity</span></label>
+    
+    <input class="form-control col-sm col-lg-12" id="validationCustom03 me-5" name="quantity" placeholder="Quantity" type="text" autocomplete="off" required>
+    
+    <span class="col-12"></span>
+    <span class="col-sm-4 col-lg-12"></span>
+    <div class="invalid-feedback col-sm col-lg-12 border-top border-danger">Please provide quantity of the product.</div>
+  </div>
+
+  <!-- Button -->
+  <div class="mx-3">
+    <button class="btn btn-primary btn-block w-100" type="submit">Save</button>
+  </div>
+</form>
+{% endblock %}
